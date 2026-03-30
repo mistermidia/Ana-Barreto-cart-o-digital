@@ -64,22 +64,12 @@ export default function App() {
           className="w-full max-w-sm bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center relative"
         >
           {/* Profile Picture */}
-          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg -mt-20 mb-6 relative">
+          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg -mt-20 mb-6">
             <img
               src="https://empurion.com.br/wp-content/uploads/2026/03/A1-2.png"
               alt="Ana Barreto"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
-            />
-            {/* Hologram Scanline Overlay */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/30 to-transparent pointer-events-none"
-              animate={{ y: ["-100%", "100%"] }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "linear",
-              }}
             />
           </div>
 
