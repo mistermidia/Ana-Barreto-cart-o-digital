@@ -66,7 +66,7 @@ export default function App() {
           {/* Profile Picture */}
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg -mt-20 mb-6">
             <img
-              src="https://empurion.com.br/wp-content/uploads/2026/03/A1-2.png"
+              src="https://empurion.com.br/wp-content/uploads/2026/04/da86f710-2281-4317-be50-8775655df78d.jpg"
               alt="Ana Barreto"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
