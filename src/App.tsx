@@ -61,27 +61,10 @@ export default function App() {
           style={{ y: cardY }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="w-full max-w-sm bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center relative overflow-hidden"
+          className="w-full max-w-sm bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center relative"
         >
-          {/* Fabric Animation Overlay */}
-          <motion.div
-            className="absolute inset-0 opacity-20 pointer-events-none"
-            animate={{
-              backgroundPosition: ["0% 0%", "100% 100%"],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            style={{
-              backgroundImage: "linear-gradient(135deg, #f0f0f0 25%, transparent 25%, transparent 50%, #f0f0f0 50%, #f0f0f0 75%, transparent 75%, transparent)",
-              backgroundSize: "120px 120px",
-            }}
-          />
-
           {/* Profile Picture */}
-          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg -mt-20 mb-6 relative z-10">
+          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg -mt-20 mb-6">
             <img
               src="https://empurion.com.br/wp-content/uploads/2026/03/A1-2.png"
               alt="Ana Barreto"
@@ -91,23 +74,27 @@ export default function App() {
           </div>
 
           {/* Name & Subtitle */}
-          <h1 className="font-serif text-3xl font-semibold text-[#5A4A40] mb-2 relative z-10">
+          <h1 className="font-serif text-3xl font-semibold text-[#5A4A40] mb-2">
             ANA BARRETO
           </h1>
-          <p className="text-sm tracking-widest uppercase mb-8 relative z-10">
+          <p className="text-sm tracking-widest uppercase mb-8">
             Videomaker & Social Media
           </p>
 
           {/* Buttons */}
-          <div className="w-full space-y-4 relative z-10">
+          <div className="w-full space-y-4">
             {buttons.map((btn) => (
               <motion.a
                 key={btn.label}
                 href={btn.href}
                 onClick={handleButtonClick}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -2,
+                  boxShadow: "0px 10px 20px rgba(90, 74, 64, 0.15)"
+                }}
                 whileTap={{ scale: 0.98 }}
-                className="block w-full py-3 border border-[#D2B48C] rounded-full text-center text-xs tracking-widest font-medium hover:bg-[#F5F2ED] transition-colors"
+                className="block w-full py-3 border border-[#D2B48C] rounded-full text-center text-xs tracking-widest font-medium hover:bg-[#5A4A40] hover:text-white hover:border-[#5A4A40] transition-all duration-300"
               >
                 {btn.label}
               </motion.a>
