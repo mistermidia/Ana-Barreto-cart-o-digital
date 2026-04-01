@@ -37,7 +37,7 @@ export default function App() {
 
   const buttons = [
     { label: "WEBSITE", href: "https://anabarretodigital.com.br/" },
-    { label: "PORTFÓLIO", href: "#" },
+    { label: "PORTFÓLIO", href: "https://anabarretodigital.com.br/#portf%C3%B3lio" },
     { label: "CONTATE-ME", href: "https://api.whatsapp.com/send/?phone=5511971950431&text&type=phone_number&app_absent=0" },
   ];
 
