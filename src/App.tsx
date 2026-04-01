@@ -31,7 +31,7 @@ export default function App() {
     // Allow navigation if the link is not just '#'
     const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
     if (href && href !== '#') {
-      setTimeout(() => window.location.href = href, 500);
+      setTimeout(() => window.open(href, '_blank'), 500);
     }
   };
 
